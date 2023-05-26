@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Admin Dashboard</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f1f1f1;
+    }
+    
+    .dashboard {
+      display: flex;
+      flex-direction: row;
+      height: 155vh;
+    }
+    
+    .sidebar {
+      background-color: #333;
+      color: #fff;
+      width: 250px;
+      padding: 20px;
+      display: flex;
+    }
+    
+    .main-content {
+      flex-grow: 1;
+      padding: 20px;
+    }
+    
+    .sidebar ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    
+    .sidebar li {
+      margin-bottom: 10px;
+    }
+    
+    .sidebar li a {
+      display: block;
+      text-decoration: none;
+      color: #fff;
+      padding: 10px;
+    }
+    
+    .sidebar li a:hover {
+      background-color: #555;
+    }
+    
+    .welcome-text {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    
+    p {
+      margin-bottom: 20px;
+    }
+    
+    .card {
+      background-color: #f8f8f8;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    
+    .card-header {
+      background-color: #e9ecef;
+      padding: 10px;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+    
+    .card-body {
+      padding-top: 10px;
+    }
+    
+    .card-title {
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+    
+    .card-text {
+      margin-bottom: 15px;
+    }
+    
+    .btn-primary {
+      background-color: #007bff;
+      border-color: #007bff;
+    }
+    
+    .btn-primary:hover {
+      background-color: #0069d9;
+      border-color: #0062cc;
+    }
+    
+    /* Adjustments */
+    
+    .dashboard {
+      padding: 0; /* Remove padding to fix layout */
+    }
+    
+    .container {
+      padding: 20px; /* Add padding back for the main content */
+    }
+    
+    @media (max-width: 768px) {
+      /* Adjust responsiveness for smaller screens */
+      .dashboard {
+        flex-direction: column;
+      }
+    
+      .sidebar {
+        width: 100%;
+        padding: 20px 0;
+        display: flex;
+        justify-content: space-around;
+      }
+    
+      .sidebar ul {
+        display: flex;
+        justify-content: space-around;
+      }
+    
+      .main-content {
+        padding: 20px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="dashboard">
+    <div class="sidebar">
+      <ul>
+        <li><a href="#">Dashboard</a></li>
+        <li><a href="#">Students</a></li>
+        <li><a href="#">Courses</a></li>
+        <li><a href="#">Grades</a></li>
+        <li><a href="#">Attendance</a></li>
+        <li><a href="#">Settings</a></li>
+      </ul>
+    </div>
+    <div class="main-content">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-header">
+                <h4 class="card-title">Personal Information</h4>
+              </div>
+              <div class="card-body">
+                <p class="card-text"><strong>Name:</strong> John Doe</p>
+                <p class="card-text"><strong>Student ID:</strong> 123456</p>
+                <p class="card-text"><strong>Program:</strong> Computer Science</p>
+                <p class="card-text"><strong>Email:</strong> john.doe@example.com</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-header">
+                <h4 class="card-title">Course Enrollment</h4>
+              </div>
+              <div class="card-body">
+                <p class="card-text"><strong>Courses:</strong></p>
+                <ul class="list-group">
+                  <li class="list-group-item">Mathematics</li>
+                  <li class="list-group-item">Computer Science</li>
+                  <li class="list-group-item">Physics</li>
+                  <li class="list-group-item">English Literature</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-header">
+                <h4 class="card-title">Grades</h4>
+              </div>
+              <div class="card-body">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Course</th>
+                      <th>Grade</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Mathematics</td>
+                      <td>90</td>
+                    </tr>
+                    <tr>
+                      <td>Computer Science</td>
+                      <td>85</td>
+                    </tr>
+                    <tr>
+                      <td>Physics</td>
+                      <td>92</td>
+                    </tr>
+                    <tr>
+                      <td>English Literature</td>
+                      <td>88</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-header">
+                <h4 class="card-title">Upcoming Exams</h4>
+              </div>
+              <div class="card-body">
+                <ul class="list-group">
+                  <li class="list-group-item">Mathematics - May 28</li>
+                  <li class="list-group-item">Computer Science - May 30</li>
+                  <li class="list-group-item">Physics - June 2</li>
+                </ul>
+                <button class="btn btn-primary">View All Exams</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>

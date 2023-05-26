@@ -1,0 +1,48 @@
+.calculator {
+    width: 200px;
+    margin: 0 auto;
+  }
+  
+  .display {
+    width: 100%;
+    height: 20px;
+    font-size: 24px;
+    text-align: right;
+  }
+  
+  .buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+  .operator {
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    background-color: #ccc;
+  }
+  
+  .clear {
+    width: 80px;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    background-color: red;
+  }
+  
+  .number {
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    background-color: #fff;
+  }
